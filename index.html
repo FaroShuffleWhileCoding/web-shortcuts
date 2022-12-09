@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Shortcuts</title>
+  </head>
+  <body>
+    <!-- modal -->
+    <div class="modal" id="shortcut_form">
+      <div class="header">
+        <div class="title">Add Shortcut</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        <label for="site-name">Name</label>
+        <input type="text" id="site-name" />
+        <label for="site-url">URL</label>
+        <input type="url" id="site-url" />
+        <input type="submit" value="Add Shortcut" id="shortcut_submit" />
+      </div>
+    </div>
+    <!-- shortcut -->
+    <div class="shortcut-container">
+      <div class="status" id="no_status">
+        <h1 id="bg1">- - - - - - - -</h1>
+        <button id="add_btn" data-target-modal="#shortcut_form">
+          + Add Shortcut
+        </button>
+      </div>
+      <div class="status">
+        <h1 id="bg2">- - - - - - - -</h1>
+      </div>
+      <div class="status">
+        <h1 id="bg3">- - - - - - - -</h1>
+      </div>
+      <div class="status">
+        <h1 id="bg4">- - - - - - - -</h1>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div class="csv-container">
+      <input type="file" id="uploadfile" accept=".csv" />
+      <button id="uploadconfirm">Import From CSV File</button>
+      <button id="btn-save">Backup Shortcuts</button>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"
+      integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
